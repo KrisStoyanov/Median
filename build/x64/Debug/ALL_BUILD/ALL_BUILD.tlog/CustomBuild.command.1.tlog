@@ -1,0 +1,10 @@
+^D:\MED\CMAKELISTS.TXT
+setlocal
+D:\CMAKE\bin\cmake.exe -SD:/Med -BD:/Med/build --check-stamp-file D:/Med/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

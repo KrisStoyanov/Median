@@ -1,0 +1,10 @@
+^D:\MED\BUILD\CMAKEFILES\D467F9A30B27C3606DFEC10315841A65\GENERATE.STAMP.RULE
+setlocal
+D:\CMAKE\bin\cmake.exe -SD:/Med -BD:/Med/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Med/build/Median.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
